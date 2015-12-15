@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="MariaDB - cvwo_assignment_1@localhost" uuid="6ccf58df-799e-4f53-aae1-3779cb185a03">
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-pattern>cvwo_assignment_1.*</schema-pattern>
+      <default-schemas>cvwo_assignment_1.*</default-schemas>
+    </data-source>
+  </component>
+</project>
