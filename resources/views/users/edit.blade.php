@@ -1,4 +1,4 @@
-<h1 xmlns="http://www.w3.org/1999/html">User Profile: Update</h1>
+<h1>User Profile: Update</h1>
 
 @if(Session::has('status'))
     {{Session::get('status')}}

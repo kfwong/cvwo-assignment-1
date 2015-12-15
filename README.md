@@ -47,6 +47,7 @@ If you do not have composer installed globally, make sure you change the syntax 
 - [Laravel built-in Authentication Guide](http://laravel.com/docs/5.1/authentication)
 - [Route Model Binding](https://laracasts.com/series/laravel-5-fundamentals/episodes/18)
 - [Session Flash Message](https://laracasts.com/series/laravel-5-fundamentals/episodes/20)
+- [Controller Middleware](http://laravel.com/docs/5.0/controllers#controller-middleware)
 
 ## Issue Unresolved
 - Seeding with model relationship

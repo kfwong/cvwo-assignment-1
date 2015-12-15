@@ -29,7 +29,7 @@ class Post extends Model
     protected $fillable = ['post_author','post_content','post_title'];
 
     public function user(){
-        return $this->belongsTo('App\User');
+        return $this->belongsTo('App\User', 'post_author');
     }
 
     public function comments(){
