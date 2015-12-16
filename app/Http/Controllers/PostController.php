@@ -16,7 +16,7 @@ class PostController extends Controller
     public function __construct()
     {
         // TODO: Move this to routes.php? Use group routes.
-        $this->middleware('auth', ['except' => ['index', 'show']]);
+        //$this->middleware('auth', ['except' => ['index', 'show']]);
     }
 
     /**

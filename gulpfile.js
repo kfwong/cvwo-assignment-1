@@ -12,5 +12,14 @@ var elixir = require('laravel-elixir');
  */
 
 elixir(function(mix) {
-    mix.sass('app.scss');
+    mix.styles([
+        'bootstrap.min.css',
+        'custom.css'
+    ]);
+
+    mix.scripts([
+        'bootstrap.min.js'
+    ]);
+
+    mix.copy('resources/assets/img', 'public/img');
 });

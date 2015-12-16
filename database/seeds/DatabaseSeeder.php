@@ -31,6 +31,14 @@ class DatabaseSeeder extends Seeder
             ]);
         });
 
+        \App\User::create([
+            'name' => 'writer',
+            'username' => 'writer',
+            'email' => 'writer@example.com',
+            'password' => Hash::make('password'),
+            'remember_token' => str_random(10)
+        ])->save();
+
         DB::statement('SET FOREIGN_KEY_CHECKS = 1'); // enable foreign key constraints
 
         Model::reguard();

@@ -9,4 +9,6 @@ npm install
 # Laravel migration with seeding operation
 php artisan migrate:refresh --seed
 
+gulp
+
 php artisan serve

@@ -23,7 +23,7 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
 
 $factory->define(App\Post::class, function (Faker\Generator $faker){
     return [
-        'post_content' => $faker->paragraph(),
+        'post_content' => '<p>'. implode('</p><p>', $faker->paragraphs(random_int(3,10))) . '</p>',
         'post_title' => $faker->sentence()
     ];
 });

@@ -18,7 +18,7 @@ Final submission due date:            5 January 2016
 ## Installation
 This project is programmed mainly using PhpStorm by Jetbrains.
 
-Make sure you have `composer`, `npm` and `php` installed in the your system, `mysql` service is running.
+Make sure you have `composer`, `npm`, `gulp` and `php` installed in the your system, `mysql` service is running.
 
 By default, the database configuration reside within .env file:
 

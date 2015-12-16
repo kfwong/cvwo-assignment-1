@@ -12,7 +12,10 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $posts = \App\Post::all();
+    return view('home', [
+        'posts' => $posts
+    ]);
 });
 
 Route::get('auth/login', 'Auth\AuthController@getLogin');
@@ -28,13 +31,3 @@ Route::resource('users', 'UserController', [
 ]);
 
 Route::resource('posts', 'PostController');
-
-/*
-Route::get('posts/','');
-Route::post('posts/', '');
-Route::get('posts/{id}', '');
-Route::put('posts/{id}', '');
-Route::delete('posts/{id}','');
-Route::get('posts/{id}/comments', '');
-Route::post('posts/{id}/comments', '');
-*/
