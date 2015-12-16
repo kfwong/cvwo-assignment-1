@@ -20,6 +20,14 @@ class CreateCommentsTable extends Migration
             $table->text('comment_content');
             $table->timestamps();
 
+            $table->foreign('post_id')
+                  ->references('id')
+                  ->on('posts');
+
+            $table->foreign('comment_author')
+                  ->references('id')
+                  ->on('users');
+
         });
     }
 

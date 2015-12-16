@@ -15,6 +15,7 @@ class DatabaseSeeder extends Seeder
     {
         Model::unguard();
 
+        DB::statement('SET FOREIGN_KEY_CHECKS = 0'); // disable foreign key constraints
         DB::table('users')->truncate();
         DB::table('posts')->truncate();
         DB::table('comments')->truncate();
@@ -29,6 +30,8 @@ class DatabaseSeeder extends Seeder
                 'post_id' => random_int(1,5)
             ]);
         });
+
+        DB::statement('SET FOREIGN_KEY_CHECKS = 1'); // enable foreign key constraints
 
         Model::reguard();
     }

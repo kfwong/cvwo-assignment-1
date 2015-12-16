@@ -15,6 +15,10 @@
       <column name="created_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
       <column name="updated_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
       <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="comments_comment_author_foreign" columns="comment_author" ref-table="users" ref-schema="" ref-catalog="cvwo_assignment_1" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="comments_post_id_foreign" columns="post_id" ref-table="posts" ref-schema="" ref-catalog="cvwo_assignment_1" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <index name="comments_comment_author_foreign" unique="false" columns="comment_author"/>
+      <index name="comments_post_id_foreign" unique="false" columns="post_id"/>
     </table>
     <table name="migrations" schema="" catalog="cvwo_assignment_1" type="TABLE">
       <column name="migration" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
@@ -35,6 +39,9 @@
       <column name="created_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
       <column name="updated_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
       <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="posts_post_author_foreign" columns="post_author" ref-table="users" ref-schema="" ref-catalog="cvwo_assignment_1" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="comments_post_id_foreign" table="comments" schema="" catalog="cvwo_assignment_1" columns="post_id"/>
+      <index name="posts_post_author_foreign" unique="false" columns="post_author"/>
     </table>
     <table name="users" schema="" catalog="cvwo_assignment_1" type="TABLE">
       <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
@@ -46,6 +53,8 @@
       <column name="created_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
       <column name="updated_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
       <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="comments_comment_author_foreign" table="comments" schema="" catalog="cvwo_assignment_1" columns="comment_author"/>
+      <exported-key name="posts_post_author_foreign" table="posts" schema="" catalog="cvwo_assignment_1" columns="post_author"/>
       <index name="users_email_unique" unique="true" columns="email"/>
     </table>
   </data-source>
