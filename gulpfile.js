@@ -18,7 +18,8 @@ elixir(function(mix) {
     ]);
 
     mix.scripts([
-        'bootstrap.min.js'
+        'bootstrap.min.js',
+        'custom.js'
     ]);
 
     mix.copy('resources/assets/img', 'public/img');

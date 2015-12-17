@@ -13,7 +13,7 @@
                 <div class="post-subtitle">
                     {!! $post->post_content !!}
                 </div>
-                <p class="post-meta">Posted by <a href="#">{{$post->user->name}}</a> on {{$post->created_at}}</p>
+                <p class="post-meta">Posted by <a href="#">{{$post->user->name}}</a>&nbsp;<span class="moment">{{$post->created_at}}</span></p>
             </div>
             <hr/>
         @endforeach
