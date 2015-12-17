@@ -7,11 +7,11 @@
             <div class="post-preview">
                 <a href="{!! action('PostController@show', [$post->id]) !!}">
                     <h2 class="post-title">
-                        {!! $post->post_title !!}
+                        {!! HTML::decode($post->post_title) !!}
                     </h2>
                 </a>
                 <div class="post-subtitle">
-                    {!! $post->post_content !!}
+                    {!! HTML::decode($post->post_content) !!}
                 </div>
                 <p class="post-meta">Posted by <a href="#">{{$post->user->name}}</a>&nbsp;<span class="moment">{{$post->created_at}}</span></p>
             </div>

@@ -36,8 +36,10 @@
         </div>
     </div>
 </footer>
+
 {!! HTML::script('https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js') !!}
 {!! HTML::script('https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js') !!}
+{!! HTML::script('//cdn.tinymce.com/4/tinymce.min.js') !!}
 {!! HTML::script('js/all.js') !!}
 
 </body>

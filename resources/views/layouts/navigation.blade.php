@@ -9,7 +9,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/">CVWO Assignment 1 - Not Your Typical Blogging Assignment</a>
+            <a class="navbar-brand" href="/">CVWO Assignment 1</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -28,7 +28,7 @@
                 </li>
                 @if(Auth::check())
                     <li>
-                        <a href="{!! action('PostController@create') !!}">Write Article</a>
+                        <a href="{!! action('PostController@create') !!}">Write New Post</a>
                     </li>
                     <li>
                         <a href="{!! action('Auth\AuthController@getLogout') !!}">Logout</a>

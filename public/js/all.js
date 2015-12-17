@@ -10,4 +10,9 @@ if("undefined"==typeof jQuery)throw new Error("Bootstrap's JavaScript requires j
 $('.moment').each(function(index){
     $(this).text(moment($(this).text(),'YYYY-MM-DD hh:mm:ss').fromNow());
 });
+
+tinymce.init({
+    selector:'textarea',
+    resize: false
+});
 //# sourceMappingURL=all.js.map

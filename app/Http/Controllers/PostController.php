@@ -114,7 +114,7 @@ class PostController extends Controller
 
         Session::flash('status', 'Update successfully.');
 
-        return redirect()->back();
+        return redirect(action('PostController@show', ['id' => $post->id]));
     }
 
     /**
@@ -131,6 +131,6 @@ class PostController extends Controller
 
         Session::flash('status', 'Blog post deleted successfully.');
 
-        return redirect()->back();
+        return redirect('/');
     }
 }
