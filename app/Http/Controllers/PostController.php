@@ -13,12 +13,6 @@ use Session;
 class PostController extends Controller
 {
 
-    public function __construct()
-    {
-        // TODO: Move this to routes.php? Use group routes.
-        //$this->middleware('auth', ['except' => ['index', 'show']]);
-    }
-
     /**
      * Display a listing of the resource.
      *
@@ -62,8 +56,8 @@ class PostController extends Controller
 
         $posts = Post::all();
 
-        return view('posts.index', [
-            'posts' => $posts
+        return view('posts.show', [
+            'post' => $post
         ]);
     }
 

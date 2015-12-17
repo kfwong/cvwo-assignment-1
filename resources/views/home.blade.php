@@ -13,7 +13,7 @@
                 <div class="post-subtitle">
                     {!! HTML::decode($post->post_content) !!}
                 </div>
-                <p class="post-meta">Posted by <a href="#">{{$post->user->name}}</a>&nbsp;<span class="moment">{{$post->created_at}}</span></p>
+                <small class="post-meta">Posted by <a href="#">{{$post->user->name}}</a>&nbsp;<span class="moment">{{$post->created_at}}</span></small>
             </div>
             <hr/>
         @endforeach

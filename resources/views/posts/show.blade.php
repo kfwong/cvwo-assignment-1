@@ -15,17 +15,19 @@
                 <br/>
                 <small>Last modified <span class="moment">{{$post->updated_at}}</span>.</small>
             </div>
+            @if(App\User::isAuthorOfPost($post))
             <div class="col-sm-6">
                 <div class="pull-right">
                     <a href="{!! action('PostController@edit', ['id' => $post->id]) !!}" class="btn btn-primary btn-xs">Edit</a>
                     <a data-toggle="modal" href="#post-confirm-delete" class="btn btn-default btn-xs">Delete</a>
                 </div>
             </div>
+            @endif
         </div>
 
     </div>
 </div>
-
+@if(App\User::isAuthorOfPost($post))
 <div class="modal" id="post-confirm-delete">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -46,5 +48,5 @@
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
-
+@endif
 @stop

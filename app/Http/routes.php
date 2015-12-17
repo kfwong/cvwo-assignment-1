@@ -26,8 +26,16 @@ Route::get('auth/logout', 'Auth\AuthController@getLogout');
 Route::get('auth/register', 'Auth\AuthController@getRegister');
 Route::post('auth/register', 'Auth\AuthController@postRegister');
 
+Route::group(['middleware' => 'auth'], function () {
+    Route::resource('posts', 'PostController', [
+        'only' => ['create', 'store', 'destroy', 'update', 'edit']
+    ]);
+});
+
+Route::resource('posts', 'PostController', [
+    'only' => ['index', 'show']
+]);
+
 Route::resource('users', 'UserController', [
     'only' => ['index', 'show', 'edit', 'update']
 ]);
-
-Route::resource('posts', 'PostController');
