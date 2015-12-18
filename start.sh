@@ -2,7 +2,7 @@
 
 # change accordingly if composer.phar is not globally installed
 # eg: composer.phar (for project based)
-composer update
+php composer.phar install
 
 npm install
 

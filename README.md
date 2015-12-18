@@ -14,20 +14,24 @@ Issue date: 10 December 2015
 Mid-assignment submission due date:   19 December 2015
 
 Final submission due date:            5 January 2016
+
+Detailed write-up (in repo): [https://github.com/kfwong/cvwo-assignment-1/blob/master/cvwo-assignment-1-writeup.pdf](https://github.com/kfwong/cvwo-assignment-1/blob/master/cvwo-assignment-1-writeup.pdf)
             
 ## Installation
-This project is programmed mainly using PhpStorm by Jetbrains.
+This project is programmed mainly using PhpStorm by Jetbrains. Recommend to clone the project directly into PhpStorm.
 
 Make sure you have `composer`, `npm`, `gulp` and `php` installed in the your system, `mysql` service is running.
 
-By default, the database configuration reside within .env file:
+All configuration resides in .env file, change the settings according to your system.
+
+By default, the database configuration:
 
 ```
 DB_DATABASE=cvwo_assignment_1
 DB_USERNAME=root
 DB_PASSWORD=root
 ```
-
+### Using `start.sh`
 Run the `start.sh` bash script:
 
 ```bash
@@ -40,7 +44,32 @@ Comment out the composer & npm update for faster subsequent startup.
 
 If you do not have composer installed globally, make sure you change the syntax in `start.sh` to reference the `composer.phar` in your system.
 
+### Manually
 
+1. Install composer dependencies 
+```bash
+php composer.phar install
+```
+
+2. Install npm dependencies
+```bash
+npm install
+```
+
+3. Run the Laravel Migration Script with seeding option
+```bash
+php artisan migrate:refresh --seed
+```
+
+4. Run Gulp task (For compiling javascript/stylesheets to proper folder)
+```bash
+gulp
+```
+
+5. Starts the server locally, by default visit: [http://localhost:8000](http://localhost:8000)
+```bash
+php artisan serve
+```
 ## Notes
 - [Model Factory with seeder relationship setup](https://laracasts.com/discuss/channels/code-review/model-factory-referencing-a-foreign-key?page=1)
 - [Laravel Development with PhpStorm](http://blog.jetbrains.com/phpstorm/2015/01/laravel-development-using-phpstorm/)
