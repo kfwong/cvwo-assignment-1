@@ -6,27 +6,33 @@
             <h1 class="text-center">Register</h1>
             {!! Form::open(['action' => 'Auth\AuthController@postRegister', 'method' => 'post', 'class' => 'form-horizontal']) !!}
             <div class="form-group">
-                {!! Form::label('name', 'Name', ['class' => 'col-sm-2 control-label']) !!}
-                <div class="col-sm-10">
+                {!! Form::label('name', 'Name', ['class' => 'col-sm-3 control-label']) !!}
+                <div class="col-sm-9">
                     {!! Form::text('name', '', ['class' => 'form-control']) !!}
                 </div>
             </div>
             <div class="form-group">
-                {!! Form::label('username', 'Username', ['class' => 'col-sm-2 control-label']) !!}
-                <div class="col-sm-10">
+                {!! Form::label('username', 'Username', ['class' => 'col-sm-3 control-label']) !!}
+                <div class="col-sm-9">
                     {!! Form::text('username', '', ['class' => 'form-control']) !!}
                 </div>
             </div>
             <div class="form-group">
-                {!! Form::label('email', 'Email', ['class' => 'col-sm-2 control-label']) !!}
-                <div class="col-sm-10">
+                {!! Form::label('email', 'Email', ['class' => 'col-sm-3 control-label']) !!}
+                <div class="col-sm-9">
                     {!! Form::text('email', '', ['class' => 'form-control']) !!}
                 </div>
             </div>
             <div class="form-group">
-                {!! Form::label('password', 'Password', ['class' => 'col-sm-2 control-label']) !!}
-                <div class="col-sm-10">
+                {!! Form::label('password', 'Password', ['class' => 'col-sm-3 control-label']) !!}
+                <div class="col-sm-9">
                     {!! Form::password('password', ['class' => 'form-control']) !!}
+                </div>
+            </div>
+            <div class="form-group">
+                {!! Form::label('password_confirmation', 'Confirm Password', ['class' => 'col-sm-3 control-label']) !!}
+                <div class="col-sm-9">
+                    {!! Form::password('password_confirmation', ['class' => 'form-control']) !!}
                 </div>
             </div>
             <div class="form-group">
