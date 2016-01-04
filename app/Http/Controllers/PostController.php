@@ -49,6 +49,7 @@ class PostController extends Controller
         $input = $request->all();
 
         $input['post_author'] = Auth::user()->id;
+        $input['post_featured_image_url'] = "http://lorempixel.com/1000/500/fashion/" . random_int(1,10);
 
         $post->fill($input)->save();
 

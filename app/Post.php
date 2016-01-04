@@ -26,7 +26,7 @@ class Post extends Model
 {
     protected $table = 'posts';
 
-    protected $fillable = ['post_author','post_content','post_title'];
+    protected $fillable = ['post_author','post_content','post_title', 'post_featured_image_url'];
 
     public function user(){
         return $this->belongsTo('App\User', 'post_author');

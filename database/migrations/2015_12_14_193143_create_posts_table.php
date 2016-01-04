@@ -17,6 +17,7 @@ class CreatePostsTable extends Migration
             $table->unsignedInteger('post_author');
             $table->longText('post_content');
             $table->text('post_title');
+            $table->text('post_featured_image_url');
             $table->timestamps();
 
             $table->foreign('post_author')

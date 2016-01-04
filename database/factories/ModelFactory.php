@@ -25,6 +25,7 @@ $factory->define(App\Post::class, function (Faker\Generator $faker){
     return [
         'post_content' => HTML::entities('<p>'. implode('</p><p>', $faker->paragraphs(random_int(3,10))) . '</p>'),
         'post_title' => HTML::entities($faker->sentence()),
+        'post_featured_image_url' => "http://lorempixel.com/1000/500/food/" . random_int(1,10),
         'created_at' => $faker->dateTime,
         'updated_at' => $faker->dateTime
     ];

@@ -2,7 +2,9 @@
 
 @section('content')
 <div class="row vertical-center">
-    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1" style="overflow: hidden;">
+        <img src="{{ $post->post_featured_image_url }}" style="max-width:100%;"/>
+
         <h1>{{$post->post_title}}</h1>
 
         <article>{!! HTML::decode($post->post_content) !!}</article>
