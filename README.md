@@ -55,26 +55,45 @@ If you do not have composer installed globally, make sure you change the syntax 
 ```bash
 php composer.phar install
 ```
-
 2. Install npm dependencies
 ```bash
 npm install
 ```
-
 3. Run the Laravel Migration Script with seeding option
 ```bash
 php artisan migrate:refresh --seed
 ```
-
 4. Run Gulp task (For compiling javascript/stylesheets to proper folder)
 ```bash
 gulp
 ```
-
 5. Starts the server locally, by default visit: [http://localhost:8000](http://localhost:8000)
 ```bash
 php artisan serve
 ```
+
+### Deployment (AWS)
+1. Create a new Ubuntu Server AMI instance.
+2. Configure AWS security group, allow access on following ports: SSH(22), HTTP(80), MYSQL(3306)
+3. Create server keypair, setup association so local machine is recognize by the server through SSH/
+4. On the server, execute apt-get command to install apache, php, php5-mcrypt, mariadb, git-core
+5. Enable pdo extension in php.ini
+6. Clone the cvwo-assignment-1 to /var/www
+7. Install composer
+8. install npm, node
+9. Create empty database schema
+10. Create a copy of .env.example and rename it to .env
+11. Execute artisan command to generate a new APP_KEY.
+12. Fill in database details in .env
+13. Run artisan migration with seeding option
+14. Globally install gulp module through npm
+15. Execute gulp task
+16. Edit apache virtual host to point to /var/www/cvwo-assignment-1/public folder
+17. Enable apache mod_rewrite and restart apache service
+18. Add AllowOverride All directive to virtual host.
+19. Execute chmod to storage folder to make it writable by apache server.
+20. Start mysql and apache service.
+
 ## Notes
 - [Model Factory with seeder relationship setup](https://laracasts.com/discuss/channels/code-review/model-factory-referencing-a-foreign-key?page=1)
 - [Laravel Development with PhpStorm](http://blog.jetbrains.com/phpstorm/2015/01/laravel-development-using-phpstorm/)
@@ -86,3 +105,4 @@ php artisan serve
 ## Issue Unresolved
 - Seeding with model relationship
 - PhpStorm autocomplete hint (IDE issue)
+- Server timezone
