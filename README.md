@@ -16,6 +16,8 @@ Mid-assignment submission due date:   19 December 2015
 Final submission due date:            5 January 2016
 
 Detailed write-up (in repo): [https://github.com/kfwong/cvwo-assignment-1/blob/master/cvwo-assignment-1-writeup.pdf](https://github.com/kfwong/cvwo-assignment-1/blob/master/cvwo-assignment-1-writeup.pdf)
+
+Live demo @ AWS: [http://52.25.200.39/](http://52.25.200.39/)
             
 ## Installation
 This project is programmed mainly using PhpStorm by Jetbrains. Recommend to clone the project directly into PhpStorm.

@@ -5,8 +5,9 @@
     <div class="col-lg-8 col-lg-offset-2">
         <div class="grid">
             @foreach($posts as $post)
-                <div class="post-preview grid-item">
-                    <div class="grid-content" style="background: -moz-linear-gradient(top, rgba(252, 252, 252, 0), rgba(252, 252, 252, 0), rgba(252, 252, 252, 0), rgba(252, 252, 252, 0),rgba(252, 252, 252, 0.75), rgba(252, 252, 252, 1), rgba(252, 252, 252, 1), rgba(252, 252, 252, 1), rgba(252, 252, 252, 1), rgba(252, 252, 252, 1),rgba(252, 252, 252, 1)), url('{{ $post->post_featured_image_url }}') top center">
+                <div class="post-preview panel panel-default">
+                    <div class="panel-body" style="background: -moz-linear-gradient(top, rgba(252, 252, 252, 0), rgba(252, 252, 252, 0), rgba(252, 252, 252, 0), rgba(252, 252, 252, 0),rgba(252, 252, 252, 0.75), rgba(252, 252, 252, 1), rgba(252, 252, 252, 1), rgba(252, 252, 252, 1), rgba(252, 252, 252, 1), rgba(252, 252, 252, 1),rgba(252, 252, 252, 1)), url('{{ $post->post_featured_image_url }}') top center;
+                            background: -webkit-linear-gradient(top, rgba(252, 252, 252, 0), rgba(252, 252, 252, 0), rgba(252, 252, 252, 0), rgba(252, 252, 252, 0),rgba(252, 252, 252, 0.75), rgba(252, 252, 252, 1), rgba(252, 252, 252, 1), rgba(252, 252, 252, 1), rgba(252, 252, 252, 1), rgba(252, 252, 252, 1),rgba(252, 252, 252, 1)), url('{{ $post->post_featured_image_url }}') top center;">
                         <div style="padding-top: 250px;">
                             <a href="{!! action('PostController@show', [$post->id]) !!}">
                                 <h2 class="post-title">
